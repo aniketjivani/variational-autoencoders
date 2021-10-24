@@ -1,11 +1,12 @@
 
-include("Dataset.jl")
-import .Dataset:
-  get_MINST,
-  TrainTest,
-  split_X_by_batches,
-  test_viz_idx,
-  min_distance_digits
+include("../variational-autoencoders/src/Dataset.jl")
+using .Dataset
+# import .Dataset:
+#   get_MINST,
+#   TrainTest,
+#   split_X_by_batches,
+#   test_viz_idx,
+#   min_distance_digits
 
 include("Model.jl")
 import .Model:

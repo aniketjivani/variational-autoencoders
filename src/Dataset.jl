@@ -1,5 +1,5 @@
 module Dataset
-export TrainTest, get_MINST
+export TrainTest, get_MNIST
 
 using MLDatasets
 
@@ -12,7 +12,7 @@ struct TrainTest
 end
 
 
-function get_MINST()
+function get_MNIST()
   test_x, test_y = MNIST.testdata()
   train_x, train_y = MNIST.traindata()
   n_sample_train = 60000
@@ -28,7 +28,7 @@ function get_MINST()
 end
 
 # take a smaller sample of
-function get_MINST(n_sample :: Int)
+function get_MNIST(n_sample :: Int)
   @assert n_sample < 10000
   test_x, test_y = MNIST.testdata()
   train_x, train_y = MNIST.traindata()
